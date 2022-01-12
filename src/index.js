@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './components/content/App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom";
+import { createBrowserHistory } from 'history'
+import i18n from './i18n';
 
-ReactDOM.render(
+import './index.scss';
+const history = createBrowserHistory()
+
+ReactDOM.hydrate(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<div>Loading ... </div>}>
+      <Router history={history}>
+        <App />
+      </Router>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,24 @@
+.profile-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin-left: 1rem;
+  &__link{
+    color: white;
+  }
+  &__button{
+    background-color: orange;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+    margin-left: 1rem;
+    transition: all 0.3s linear;
+    opacity: 1;
+    &:hover, &:focus{
+      transition: all 0.3s linear;
+      opacity: 0.6;
+    }
+  }
+}

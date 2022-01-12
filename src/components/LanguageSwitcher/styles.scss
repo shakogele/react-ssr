@@ -1,0 +1,10 @@
+.language-switcher{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span{
+    margin: 0 1rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+}
